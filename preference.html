@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventoasis - Select Preferences</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, rgb(44, 44, 44) 40%, rgb(44, 44, 44) 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            flex-direction: column;
+        }
+
+        .heading {
+            font-family: 'Great Vibes', cursive;
+            font-size: 60px;
+            font-weight: 600;
+            color: #000000;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .website-title {
+            font-family: 'Great Vibes';
+            font-size: 36px;
+            font-weight: 600;
+            color: #000000;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .website-title:before,
+        .website-title:after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 4px;
+            background-color: #191919;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .website-title:before {
+            left: -60px;
+        }
+
+        .website-title:after {
+            right: -60px;
+        }
+
+        h2 {
+            margin-top: 0;
+            color: #333;
+            font-weight: 400;
+        }
+
+        form {
+            margin: 20px 0;
+        }
+
+        .preferences {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+
+        .preferences label {
+            display: flex;
+            align-items: center;
+            margin: 5px 0;
+            font-size: 16px;
+        }
+
+        .preferences input[type="checkbox"] {
+            margin-right: 10px;
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 12px;
+            background: linear-gradient(135deg, rgb(44, 44, 44) 0%, rgb(44, 44, 44) 100%);
+            border: none;
+            border-radius: 25px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background: linear-gradient(135deg, rgb(44, 44, 44) 0%, rgb(44, 44, 44) 100%);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="website-title">Event Preferences</div>
+
+        <h2>Select Your Favorite Event Types</h2>
+        <form id="preferences-form">
+            <div class="preferences">
+                <label>
+                    <input type="checkbox" name="event-type" value="music"> Music Festivals
+                </label>
+                <label>
+                    <input type="checkbox" name="event-type" value="food"> Food Events
+                </label>
+                <label>
+                    <input type="checkbox" name="event-type" value="art"> Art Exhibitions
+                </label>
+                <label>
+                    <input type="checkbox" name="event-type" value="theater"> Theater Performances
+                </label>
+                <label>
+                    <input type="checkbox" name="event-type" value="sports"> Sports Events
+                </label>
+                <label>
+                    <input type="checkbox" name="event-type" value="culture"> Cultural Festivals
+                </label>
+                <label>
+                    <input type="checkbox" name="event-type" value="comedy"> Comedy Shows
+                </label>
+                <label>
+                    <input type="checkbox" name="event-type" value="workshop"> Workshops & Seminars
+                </label>
+                <label>
+                    <input type="checkbox" name="event-type" value="dance"> Dance Performances
+                </label>
+                <label>
+                    <input type="checkbox" name="event-type" value="literature"> Literary Events
+                </label>
+            </div>
+            <input type="submit" value="Continue"> 
+        </form>
+    </div>
+    <script>
+        document.getElementById('preferences-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the form from submitting the traditional way
+            window.location.href = 'map2.html'; // Redirect to the map interface
+        });
+    </script>
+    
+</body>
+
+</html>
